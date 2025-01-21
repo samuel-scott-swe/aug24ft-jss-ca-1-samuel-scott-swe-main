@@ -20,17 +20,20 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">
-            </th>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-          </tr>
+          <% memes.forEach((meme) => { %>
+            <tr>
+              <th scope="row"><%= meme.id %></th>
+              <td><%= meme.width %>x<%= meme.height %></td>
+              <td>
+                <img src="<%= meme.url %>" alt="<%= meme.name %>" style="width: 20%;">
+              </td>
+              <td>
+                <a href="/meme/<%= meme.id %>" class="btn btn-primary">Details</a>
+              </td>
+            </tr>
+          <% }); %>
         </tbody>
+        
       </table>
     </section>
     <%- include('./partials/scripts.ejs') %>
