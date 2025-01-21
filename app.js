@@ -13,7 +13,35 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy; // This will be used for login feature later
 console.log('All packages loaded successfully, Thank goddness');
 // ---------------------------------------------------------------
+// Fetch and Cache 20 memes from API.json
+const fs = require('fs');
 
+const apiConfiguration = JSON.parse(fs.readFileSync('./api.json'));
+
+const apiUrl = apiConfiguration.apiUrl;
+console.log('API URL loaded:', apiUrl);
+
+const http = require('http');
+let memeCache = []; // Cache to store the 20 memes
+
+// Fetch memes from the API
+http.get(apiUrl, (res) => {
+  let data = '';
+
+  // Collect data in chunks
+  res.on('data', (chunk) => {
+    data += chunk;
+  });
+
+  // Parse and store memes when the response is complete
+  res.on('end', () => {
+    memeCache = JSON.parse(data);
+    console.log('Memes fetched and cached:', memeCache);
+  });
+}).on('error', (err) => {
+  console.error('Error fetching memes:', err);
+});
+// -----------------------------------------
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
