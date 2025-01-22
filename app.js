@@ -45,17 +45,12 @@ function fetchMemes(apiUrl) {
   });
 }
 
-// Use async to ensure memes are fetched before starting the app
+// Use async to ensure memes are fetched before the app is ready
 (async () => {
   try {
-    const memes = await fetchMemes(apiUrl); // Pass apiUrl to fetchMemes
-    app.set('memeCache', memes); // Store memes in app-level cache
-    console.log('Memes fetched and cached:', memes);
-
-    // Start the server only after memes are fetched
-    const http = require('http');
-    const server = http.createServer(app);
-    server.listen(3000, () => console.log('Server running on http://localhost:3000/'));
+    const memes = await fetchMemes(apiUrl); // Fetch memes
+    app.set('memeCache', memes); // Cache memes
+    console.log('Memes fetched and cached.');
   } catch (error) {
     console.error('Failed to fetch memes:', error);
   }
