@@ -1,0 +1,88 @@
+Important Repository
+The Git Classroom link for this assignment will be posted in your class channel on Microsoft Teams on the day the assignment opens. Expect the link by 09H00 when the assignments open.
+Your private GIT repository for this assignment will be created once you accept the assignment, accessible only by you and the course instructors and graders.
+
+Only commits made in the Git Classroom will be considered for grading. Any repositories you create outside the provided Git Classroom link will not be graded. Ensure all your work is committed before the course assignment deadline.  After the deadline, you cannot commit any more code to your repository or Git classroom. Any attempts to commit after the deadline will be automatically rejected.
+
+
+VIDEO LINK: Git classroom informative video
+
+ImportantSubmission
+Your application must be pushed to your GitHub Classroom repository BEFORE the course assignment deadline.
+The link to your repository and your GitHub username must be submitted on Moodle in a .txt file named the following: “FName_LName_JSS_CA_ClassXXYY.txt”
+(Replace 'Class' with your class, e.g. 'Aug', 'Oct', etc)
+(Replace 'XX' with your class year e.g. 22, 23) (Replace 'YY' with either FT for Fulltime, or PT for Parttime)
+EXAMPLE: JOHN_DOE_JSS_CA_JAN23FT.txt
+
+Commits or submissions past the deadline will not be considered for grading.
+Late submissions will not be accepted, and there will be no exceptions to this rule.
+
+Failure to submit this file to Moodle OR push (commit) your code to the git classroom will result in a not passed grade
+
+- Introduction - 
+You have been appointed as a junior developer at a development company called 'Central'. You have replaced one of the other junior developers who were working on a Meme web application for a client. He did not complete the application before he left. The application was about 25% done, and not all the functionality had been done.
+You will take his code and complete the task per the client's instructions. 
+This developer did not use any version control, and the company's CEO found a zip file containing the last code he had done. This code needs to be used as a starting point.
+
+The developer used NodeJS with Express and the EJS template engine. This was a requirement from the client. The CEO tried to run the application, but there were errors, and he could not fix them. Your task would be to fix the errors, see what has been done, and complete what still needs to be done.
+
+
+- Client Brief - 
+The client needs the following functionality in the application:
+
+There needs to be a Meme Overview page. Which shows a table populated with 20x different memes - a common term for funny internet images. 
+(The API to use for the API call is http://jss.restapi.co.za/memes. This API will return 20x random memes).
+This API call should only be made once, with the 20x results then stored in an object when the web application initially loads.
+i.e. Even when navigating to different pages, upon returning to the Memes Overview page, the same object should be used to populate the table. (The same list of memes must be displayed)
+Only when the web app is closed, the server is restarted, and the web app is reopened should a new singular API call be made, storing the new results in the object again.
+The API URL needs to be in a configuration environment file to make it easier for the client to change it if they want to.
+(This environment file can just be a JSON file with configuration variables to be used in your project, such as the required API URL.)
+
+In the table mentioned above, each row should have a small image of a meme (scaled down to 20% of the image's original size), the name of that meme, and a 'Details' button that, when clicked, opens a Meme Details page and displays all of that meme's information - ID, URL, Image, name, and dimensions (width, height).
+Once a meme has been viewed (had its 'Details' button clicked), the background color of that table row should be changed so that the user can keep track of what they have viewed (Even if the Memes Overview page is refreshed).
+The table should have Search functionality.
+
+
+There must be a Search input text element, as well as a "Search" button. When text is input and the "Search" button is clicked, this search should find memes with the name that matches the search input text and only display the matching results in the table. If the search input text is removed or cleared, the original 20x memes must repopulate the table (i.e. the API call must NOT be made again, otherwise a whole new set of 20x memes will populate the table) 
+The search functionality should be done in the back-end and not the front-end.
+
+
+There needs to be a login system, including a Login page:
+Users are shown the Login page when clicking the "Login" button in the Navbar, if they aren't already logged in.
+Guest users  - should not see the 'Details' buttons to view more information about the memes, but should be able to see the list of memes in the table. 
+For logged in users - once a user has successfully logged in, they should be redirected back to the Memes Overview page, and only then should the 'Details' buttons be visible. Clicking these buttons will open the Meme Details page, where users can see more information about the chosen meme.
+If a Guest user enters the URL of a meme to access the details for that meme, they would need to be redirected to the login page. (Guest users are not allowed to see the details even if they enter the URL)
+There needs to be a Navbar:
+This navbar must include the Central logo, the "Login" or "Logout" buttons (Show the relevant button depending on if the user is currently logged in), and the relevant user name ("Guest" if user is not logged in, their Username if the user is logged in) 
+This Navbar must appear on both the Meme Overview and Meme Details page (i.e. reuse the same view to not repeat code)
+When the Navbar brand (logo) is clicked from any page, the webpage should redirect to the Memes Overview page
+A README file must exist detailing the technologies used in this project and any special installation instructions regarding any external libraries or packages used. How this application must be run must also be described. (Should live-server or anything else be needed)
+ 
+
+- Instructions -
+A discussion between the client and the previous developer led to the following decisions on technologies that should be used:
+
+JQuery, Bootstrap version 5.2.3, and PassportJS external libraries must be installed using NPM, and not linked through CDN
+Make sure that you use the correct NPM install command to save the package dependencies to your project
+The Express framework should be used with the EJS template engine. 
+Any additional styles added to the views must be in the correct file type and folder. 
+Any custom JavaScript code used needs to be in the correct folder.
+The login system must use PassportJS with a users.json (at least three (3) users need to be created) file in the correct location. This will be used for user authentication when the user logs in to the application. Guest users should have limited functionality (Not able to view more information about memes)
+Store information about the currently logged-in user with the use of Sessions 
+- Structure - 
+There need to be Memes Overview and Meme Details views with the correct routes.
+Any stylesheets or JavaScript files that have been added need to be in the correct folders.
+
+When a table row's 'Details' button is clicked in the Memes Overview view, the click event needs to utilize a JavaScript function, created in a JavaScript file in the correct folder, to POST the information to the meme route to open the Meme Details view and display the correct information for the selected meme.
+
+The three users that must be created in the correct file for authentication should have the following credentials:
+
+Username: Josh
+Password: Josh1
+
+Username: FJ
+Password: FJ1
+
+Username: Student
+Password: Student1
+
