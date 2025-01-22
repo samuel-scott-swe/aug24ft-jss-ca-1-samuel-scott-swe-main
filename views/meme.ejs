@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <title>Meme Info</title>
-  <link rel="stylesheet" href="../css/bootstrap.min.css" />
-  <link href="../stylesheets/navbar.css" rel="stylesheet">
-  <link rel="stylesheet" href="../stylesheets/meme.css">
-</head>
-
+<%- include('./partials/head.ejs', { pageTitle: 'Meme Info' }) %>
 <body class="position-relative" data-bs-spy="scroll">
   <%- include('./partials/navbar.ejs') %>
-    <section class="container">
-
-    </section>
-
-    <%- include('./partials/scripts.ejs') %>
+  <section class="container">
+    <h1>Meme Details</h1>
+    <% if (meme) { %>
+      <p><strong>ID:</strong> <%= meme.id %></p>
+      <p><strong>Name:</strong> <%= meme.name %></p>
+      <p><strong>Dimensions:</strong> <%= meme.width %>x<%= meme.height %></p>
+      <img src="<%= meme.url %>" alt="<%= meme.name %>" style="width: 50%;">
+    <% } else { %>
+      <p>Meme details not found.</p>
+    <% } %>
+  </section>
+  <%- include('./partials/scripts.ejs') %>
 </body>
 
 </html>

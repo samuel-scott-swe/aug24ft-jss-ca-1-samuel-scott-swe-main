@@ -1,67 +1,32 @@
 {
   "memes": [
     {
-      "id": 164,
-      "name": "Roll Safe Think About It",
-      "url": "http://images.restapi.co.za/memes/1h7in3.jpg",
-      "width": 702,
-      "height": 395
+      "id": 137,
+      "name": "Sleeping Shaq",
+      "url": "http://images.restapi.co.za/memes/1nck6k.jpg",
+      "width": 640,
+      "height": 631
     },
     {
-      "id": 141,
-      "name": "X, X Everywhere",
-      "url": "http://images.restapi.co.za/memes/1ihzfe.jpg",
-      "width": 2118,
-      "height": 1440
-    },
-    {
-      "id": 134,
-      "name": "Surprised Pikachu",
-      "url": "http://images.restapi.co.za/memes/2kbn1e.jpg",
-      "width": 1893,
-      "height": 1893
-    },
-    {
-      "id": 180,
-      "name": "Hard To Swallow Pills",
-      "url": "http://images.restapi.co.za/memes/271ps6.jpg",
+      "id": 168,
+      "name": "Unsettled Tom",
+      "url": "http://images.restapi.co.za/memes/2wifvo.jpg",
       "width": 680,
-      "height": 979
+      "height": 550
     },
     {
-      "id": 152,
-      "name": "Clown Applying Makeup",
-      "url": "http://images.restapi.co.za/memes/38el31.jpg",
-      "width": 750,
-      "height": 798
+      "id": 202,
+      "name": "Average Fan vs Average Enjoyer",
+      "url": "http://images.restapi.co.za/memes/58q6lo.png",
+      "width": 708,
+      "height": 720
     },
     {
-      "id": 128,
-      "name": "Marked Safe From",
-      "url": "http://images.restapi.co.za/memes/2odckz.jpg",
-      "width": 618,
-      "height": 499
-    },
-    {
-      "id": 173,
-      "name": "Types of Headaches meme",
-      "url": "http://images.restapi.co.za/memes/1yz6z4.jpg",
-      "width": 483,
-      "height": 497
-    },
-    {
-      "id": 111,
-      "name": "UNO Draw 25 Cards",
-      "url": "http://images.restapi.co.za/memes/3lmzyx.jpg",
-      "width": 500,
-      "height": 494
-    },
-    {
-      "id": 187,
-      "name": "What Gives People Feelings of Power",
-      "url": "http://images.restapi.co.za/memes/2xytmc.jpg",
-      "width": 960,
-      "height": 851
+      "id": 198,
+      "name": "elmo cocaine",
+      "url": "http://images.restapi.co.za/memes/2bqzyl.jpg",
+      "width": 320,
+      "height": 320
     },
     {
       "id": 109,
@@ -71,11 +36,95 @@
       "height": 449
     },
     {
-      "id": 176,
-      "name": "Finding Neverland",
-      "url": "http://images.restapi.co.za/memes/3pnmg.jpg",
-      "width": 423,
-      "height": 600
+      "id": 189,
+      "name": "Trump Bill Signing",
+      "url": "http://images.restapi.co.za/memes/1ii4oc.jpg",
+      "width": 1866,
+      "height": 1529
+    },
+    {
+      "id": 174,
+      "name": "Mother Ignoring Kid Drowning In A Pool",
+      "url": "http://images.restapi.co.za/memes/46hhvr.jpg",
+      "width": 782,
+      "height": 1032
+    },
+    {
+      "id": 144,
+      "name": "Megamind peeking",
+      "url": "http://images.restapi.co.za/memes/64sz4u.png",
+      "width": 540,
+      "height": 540
+    },
+    {
+      "id": 106,
+      "name": "Waiting Skeleton",
+      "url": "http://images.restapi.co.za/memes/2fm6x.jpg",
+      "width": 298,
+      "height": 403
+    },
+    {
+      "id": 126,
+      "name": "This Is Fine",
+      "url": "http://images.restapi.co.za/memes/wxica.jpg",
+      "width": 580,
+      "height": 282
+    },
+    {
+      "id": 161,
+      "name": "This Is Where I'd Put My Trophy If I Had One",
+      "url": "http://images.restapi.co.za/memes/1wz1x.jpg",
+      "width": 300,
+      "height": 418
+    },
+    {
+      "id": 157,
+      "name": "Leonardo Dicaprio Cheers",
+      "url": "http://images.restapi.co.za/memes/39t1o.jpg",
+      "width": 600,
+      "height": 400
+    },
+    {
+      "id": 148,
+      "name": "All My Homies Hate",
+      "url": "http://images.restapi.co.za/memes/3kwur5.jpg",
+      "width": 680,
+      "height": 615
+    },
+    {
+      "id": 151,
+      "name": "Ancient Aliens",
+      "url": "http://images.restapi.co.za/memes/26am.jpg",
+      "width": 500,
+      "height": 437
+    },
+    {
+      "id": 142,
+      "name": "I Bet He's Thinking About Other Women",
+      "url": "http://images.restapi.co.za/memes/1tl71a.jpg",
+      "width": 1654,
+      "height": 930
+    },
+    {
+      "id": 150,
+      "name": "Megamind no bitches",
+      "url": "http://images.restapi.co.za/memes/65939r.jpg",
+      "width": 674,
+      "height": 734
+    },
+    {
+      "id": 110,
+      "name": "Buff Doge vs. Cheems",
+      "url": "http://images.restapi.co.za/memes/43a45p.png",
+      "width": 937,
+      "height": 720
+    },
+    {
+      "id": 164,
+      "name": "Roll Safe Think About It",
+      "url": "http://images.restapi.co.za/memes/1h7in3.jpg",
+      "width": 702,
+      "height": 395
     },
     {
       "id": 190,
@@ -85,65 +134,16 @@
       "height": 284
     },
     {
-      "id": 172,
-      "name": "You Guys are Getting Paid",
-      "url": "http://images.restapi.co.za/memes/2xscjb.png",
-      "width": 520,
-      "height": 358
-    },
-    {
-      "id": 159,
-      "name": "Oprah You Get A",
-      "url": "http://images.restapi.co.za/memes/gtj5t.jpg",
-      "width": 620,
-      "height": 465
-    },
-    {
-      "id": 121,
-      "name": "Disaster Girl",
-      "url": "http://images.restapi.co.za/memes/23ls.jpg",
-      "width": 500,
-      "height": 375
-    },
-    {
-      "id": 156,
-      "name": "Grant Gustin over grave",
-      "url": "http://images.restapi.co.za/memes/3nx72a.png",
-      "width": 500,
-      "height": 475
-    },
-    {
-      "id": 194,
-      "name": "is this butterfly",
-      "url": "http://images.restapi.co.za/memes/2cjr7j.jpg",
-      "width": 1587,
-      "height": 1425
-    },
-    {
-      "id": 197,
-      "name": "Gentlemen, it is with great pleasure to inform you that",
-      "url": "http://images.restapi.co.za/memes/56p56k.jpg",
-      "width": 1400,
-      "height": 1400
-    },
-    {
-      "id": 149,
-      "name": "A train hitting a school bus",
-      "url": "http://images.restapi.co.za/memes/434i5j.png",
-      "width": 920,
-      "height": 1086
-    },
-    {
-      "id": 116,
-      "name": "Anakin Padme 4 Panel",
-      "url": "http://images.restapi.co.za/memes/5c7lwq.png",
-      "width": 768,
-      "height": 768
+      "id": 152,
+      "name": "Clown Applying Makeup",
+      "url": "http://images.restapi.co.za/memes/38el31.jpg",
+      "width": 750,
+      "height": 798
     }
   ],
   "viewedMemes": [
-    164,
-    141,
-    134
+    168,
+    137,
+    202
   ]
 }
