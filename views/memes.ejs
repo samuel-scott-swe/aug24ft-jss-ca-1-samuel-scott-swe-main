@@ -1,70 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="../../css/bootstrap.min.css" />
-  <link href="../../stylesheets/navbar.css" rel="stylesheet">
+  <title>Meme Overview</title>
+  <%- include('./partials/head.ejs') %>
 </head>
-
-<body class="position-relative" data-bs-spy="scroll">
+<body>
   <%- include('./partials/navbar.ejs') %>
-    <section class="container">
-      <table class="table" id="table">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Size</th>
-            <th scope="col">Image</th>
-            <th scope="col">Options</th>
+  
+  <section class="container">
+    <!-- Search Form -->
+    <form id="searchForm" method="POST" action="/memes/search" class="d-flex mb-3">
+      <input type="text" name="searchTerm" id="searchTerm" class="form-control me-2" placeholder="Search for a meme...">
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+    <!-- Meme Table -->
+    <table class="table" id="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Size</th>
+          <th scope="col">Image</th>
+          <th scope="col">Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% memes.forEach((meme) => { %>
+          <tr class="<%= viewedMemes.includes(meme.id) ? 'table-success' : '' %>">
+            <th scope="row"><%= meme.id %></th>
+            <td><%= meme.width %>x<%= meme.height %></td>
+            <td>
+              <img src="<%= meme.url %>" alt="<%= meme.name %>" style="width: 20%;">
+            </td>
+            <td>
+              <a href="/memes/meme/<%= meme.id %>" class="btn btn-primary">Details</a>
+            </td>
           </tr>
-        </thead>
-        <tbody>
-          <% memes.forEach((meme) => { %>
-            <tr class="<%= viewedMemes.includes(meme.id) ? 'table-success' : '' %>">
-              <th scope="row"><%= meme.id %></th>
-              <td><%= meme.width %>x<%= meme.height %></td>
-              <td>
-                <img src="<%= meme.url %>" alt="<%= meme.name %>" style="width: 20%;">
-              </td>
-              <td>
-                <button class="btn btn-primary view-detail" data-id="<%= meme.id %>">Details</button>
-              </td>
-            </tr>
-          <% }); %>
-        </tbody>
-        
-      </table>
-    </section>
-    <script>
-      // JavaScript to handle row highlighting
-      document.querySelectorAll('.view-detail').forEach(button => {
-        button.addEventListener('click', function() {
-          const memeId = this.getAttribute('data-id');
-
-          // Add the meme ID to cookies for server-side persistence
-          document.cookie = `viewedMemes=${memeId}; path=/;`;
-        });
-      });
-
-      // Highlight rows for viewed memes on page load
-      const viewedMemes = document.cookie
-        .split('; ')
-        .find(row => row.startsWith('viewedMemes='))
-        ?.split('=')[1]
-        ?.split(',') || [];
-
-      document.querySelectorAll('tr').forEach(row => {
-        const button = row.querySelector('.view-detail');
-        if (button) {
-          const memeId = button.getAttribute('data-id');
-          if (viewedMemes.includes(memeId)) {
-            row.classList.add('table-success');
-          }
-        }
-      });
-    </script>
-    <%- include('./partials/scripts.ejs') %>
+        <% }); %>
+      </tbody>
+    </table>
+  </section>
+  
+  <%- include('./partials/scripts.ejs') %>
 </body>
-
 </html>

@@ -25,4 +25,24 @@ router.get('/', (req, res) => {
   }
 });
 
+// Route for search functionality
+router.post('/search', (req, res) => {
+  try {
+    const searchTerm = req.body.searchTerm?.toLowerCase() || '';
+    const data = JSON.parse(fs.readFileSync(pathToDataFile));
+    const memeCache = data.memes;
+
+    // Filter memes based on the search term
+    const filteredMemes = searchTerm
+      ? memeCache.filter((meme) => meme.name.toLowerCase().includes(searchTerm))
+      : memeCache;
+
+    // Render the memes.ejs with filtered results
+    res.render('memes', { memes: filteredMemes, viewedMemes: data.viewedMemes });
+  } catch (error) {
+    console.error('Error handling POST /search:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
 module.exports = router;
