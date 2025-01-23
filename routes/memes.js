@@ -18,31 +18,45 @@ router.get('/', (req, res) => {
       return res.status(500).send('No memes available. Check the API or server logic.');
     }
 
-    res.render('memes', { memes: memeCache, viewedMemes });
+    res.render('memes', {
+      memes: memeCache,
+      viewedMemes,
+      noResults: false, // Default noResults to false for initial load
+      memeImagePath: '', // No image path needed for initial load
+    });
   } catch (error) {
     console.error('Error reading or parsing memes.json:', error);
     res.status(500).send('Internal Server Error');
   }
 });
 
-// Route for search functionality
 router.post('/search', (req, res) => {
   try {
     const searchTerm = req.body.searchTerm?.toLowerCase() || '';
-    const data = JSON.parse(fs.readFileSync(pathToDataFile));
-    const memeCache = data.memes;
+    console.log('Search Term:', searchTerm); // Debugging
 
-    // Filter memes based on the search term
-    const filteredMemes = searchTerm
-      ? memeCache.filter((meme) => meme.name.toLowerCase().includes(searchTerm))
-      : memeCache;
+    const data = JSON.parse(fs.readFileSync(pathToDataFile, 'utf-8'));
+    console.log('Memes Data:', data.memes); // Debugging
 
-    // Render the memes.ejs with filtered results
-    res.render('memes', { memes: filteredMemes, viewedMemes: data.viewedMemes });
+    const filteredMemes = data.memes.filter(meme =>
+      meme.name.toLowerCase().includes(searchTerm)
+    );
+    console.log('Filtered Memes:', filteredMemes); // Debugging
+
+    const noResults = filteredMemes.length === 0; // Determine if there are no results
+    console.log('No Results:', noResults); // Debugging
+
+    res.render('memes', {
+      memes: filteredMemes,
+      viewedMemes: data.viewedMemes,
+      noResults, // Pass the noResults flag
+      memeImagePath: '/images/404.png', // Pass the path to the meme image
+    });
   } catch (error) {
-    console.error('Error handling POST /search:', error);
+    console.error('Error handling /search route:', error);
     res.status(500).send('Internal Server Error');
   }
 });
+
 
 module.exports = router;
