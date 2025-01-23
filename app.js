@@ -3,8 +3,9 @@ var express = require('express');
 var path = require('path');
 var logger = require('morgan');
 var indexRouter = require('./routes/index');
-var memesRouter = require('./routes/memes'); // Import memes router
 var app = express();
+const memesRouter = require('./routes/memes'); // For Meme Overview
+const memeRouter = require('./routes/meme'); // For Meme Details
 
 // Dependencies and libraries.
 // --------------------------------------------------------------
@@ -75,7 +76,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(__dirname + '/node_modules/bootstrap/dist'));
 
 // Register routers
-app.use('/memes', memesRouter); // Register memes router
+app.use('/memes', memesRouter); // Handle Meme Overview and search
+app.use('/memes/meme', memeRouter); // Handle Meme Details
+
+
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
