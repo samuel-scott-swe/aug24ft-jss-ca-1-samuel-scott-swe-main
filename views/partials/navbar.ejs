@@ -1,20 +1,29 @@
 <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100 fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/">Meme Central</a>
+        <a class="navbar-brand" href="/">
+            <img src="/images/logo.png" alt="Central Logo" height="40" class="d-inline-block align-text-top">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
+            <ul class="navbar-nav align-items-center">
                 <li class="nav-item">
                     <a class="nav-link" href="/memes">Memes</a>
                 </li>
+                <li class="nav-item me-3">
+                    <span class="nav-text">
+                        <i class="bi bi-person-circle me-1"></i>
+                        <%= typeof user !== 'undefined' && user ? user.username : 'Guest' %>
+                    </span>
+                </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/login">Sign in</a>
+                    <% if (typeof user !== 'undefined' && user) { %>
+                        <a class="nav-link btn btn-outline-primary" href="/login/logout">Logout</a>
+                    <% } else { %>
+                        <a class="nav-link btn btn-outline-primary" href="/login">Login</a>
+                    <% } %>
                 </li>
             </ul>
         </div>

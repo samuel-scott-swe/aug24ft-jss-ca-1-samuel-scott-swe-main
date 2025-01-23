@@ -36,7 +36,10 @@ router.get('/:id', ensureAuthenticated, (req, res) => {
       fs.writeFileSync(pathToDataFile, JSON.stringify({ memes: memeCache, viewedMemes }, null, 2), 'utf-8');
     }
 
-    res.render('meme', { meme: selectedMeme });
+    res.render('meme', { 
+      meme: selectedMeme,
+      user: req.user  
+    });
   } catch (error) {
     console.error('Error handling /meme/:id route:', error);
     res.status(500).send('Internal Server Error');
@@ -44,7 +47,7 @@ router.get('/:id', ensureAuthenticated, (req, res) => {
 });
 
 // POST
-router.post('/', (req, res) => {
+router.post('/', ensureAuthenticated, (req, res) => {
   try {
     const memeId = parseInt(req.body.id, 10);
     const data = JSON.parse(fs.readFileSync(pathToDataFile, 'utf-8'));
