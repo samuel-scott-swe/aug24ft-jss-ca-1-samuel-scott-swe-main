@@ -33,11 +33,20 @@ app.use(
   })
 );
 
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname + '/node_modules/bootstrap/dist'));
+
 // Initialize PassportJS
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash()); // Initialize flash messages
-app.use('/login', authRouter);
 
 // Path to users.json file
 const pathToUsersFile = path.join(__dirname, 'data', 'users.json');
@@ -124,16 +133,6 @@ async function fetchAndCacheMemes(apiUrl) {
     console.error('Failed to initialize meme cache:', error);
   }
 })();
-
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(__dirname + '/node_modules/bootstrap/dist'));
 
 // Register routers
 app.use('/login', authRouter); // Login and Logout handling

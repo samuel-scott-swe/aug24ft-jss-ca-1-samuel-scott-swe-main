@@ -4,15 +4,16 @@ const router = express.Router();
 
 // Render login page
 router.get('/', (req, res) => {
-  res.render('login', { message: req.flash('error') }); // connect-flash
-});
+    res.render('login', { message: req.flash('error') });
+  });
+  
 
 // Handle login POST
 router.post('/', passport.authenticate('local', {
-  successRedirect: '/memes',
-  failureRedirect: '/login',
-  failureFlash: true,
-}));
+    successRedirect: '/memes',
+    failureRedirect: '/login',
+    failureFlash: true,
+  }));
 
 // Handle logout
 router.get('/logout', (req, res) => {
