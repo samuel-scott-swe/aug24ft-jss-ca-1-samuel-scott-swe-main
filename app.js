@@ -4,8 +4,10 @@ var path = require('path');
 var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var app = express();
+const authRouter = require('./routes/authentication'); // For Login/Logout
 const memesRouter = require('./routes/memes'); // For Meme Overview
 const memeRouter = require('./routes/meme'); // For Meme Details
+const flash = require('connect-flash'); // connect flash
 
 // Dependencies and libraries.
 // --------------------------------------------------------------
@@ -34,6 +36,8 @@ app.use(
 // Initialize PassportJS
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(flash()); // Initialize flash messages
+app.use('/login', authRouter);
 
 // Path to users.json file
 const pathToUsersFile = path.join(__dirname, 'data', 'users.json');
@@ -132,10 +136,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(__dirname + '/node_modules/bootstrap/dist'));
 
 // Register routers
+app.use('/login', authRouter); // Login and Logout handling
 app.use('/memes', memesRouter); // Handle Meme Overview and search
 app.use('/memes/meme', memeRouter); // Handle Meme Details
-
-
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
@@ -144,7 +147,7 @@ app.use(function (req, res, next) {
 });
 
 // error handler
-app.use(function (err, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
