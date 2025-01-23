@@ -20,31 +20,28 @@
         <img src="<%= memeImagePath %>" alt="No results meme" style="max-width: 50%; margin-top: 20px;">
       </div>
     <% } else { %>
-      <!-- Meme Table -->
-      <table class="table" id="table">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Size</th>
-            <th scope="col">Image</th>
-            <th scope="col">Options</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% memes.forEach((meme) => { %>
-            <tr class="<%= viewedMemes.includes(meme.id) ? 'table-success' : '' %>">
-              <th scope="row"><%= meme.id %></th>
-              <td><%= meme.width %>x<%= meme.height %></td>
-              <td>
-                <img src="<%= meme.url %>" alt="<%= meme.name %>" style="width: 20%;">
-              </td>
-              <td>
-                <a href="/memes/meme/<%= meme.id %>" class="btn btn-primary">Details</a>
-              </td>
-            </tr>
-          <% }); %>
-        </tbody>
-      </table>
+      <div class="row g-4">
+        <% memes.forEach((meme) => { %>
+          <div class="col-md-6">
+            <div class="card h-100 <%= viewedMemes.includes(meme.id) ? 'bg-success bg-opacity-10' : '' %>">
+              <div class="row g-0">
+                <div class="col-12 text-center p-3">
+                  <img src="<%= meme.url %>" alt="<%= meme.name %>" style="width: 20%;">
+                </div>
+                <div class="col-12">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Meme #<%= meme.id %></h5>
+                    <p class="card-text">Size: <%= meme.width %>x<%= meme.height %></p>
+                    <% if (user) { %>
+                      <a href="/memes/meme/<%= meme.id %>" class="btn btn-primary">Details</a>
+                    <% } %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+      </div>
     <% } %>
   </section>
   

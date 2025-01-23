@@ -1,81 +1,11 @@
 {
   "memes": [
     {
-      "id": 180,
-      "name": "Hard To Swallow Pills",
-      "url": "http://images.restapi.co.za/memes/271ps6.jpg",
-      "width": 680,
-      "height": 979
-    },
-    {
-      "id": 193,
-      "name": "Domino Effect",
-      "url": "http://images.restapi.co.za/memes/2oo7h0.jpg",
-      "width": 820,
-      "height": 565
-    },
-    {
-      "id": 126,
-      "name": "This Is Fine",
-      "url": "http://images.restapi.co.za/memes/wxica.jpg",
-      "width": 580,
-      "height": 282
-    },
-    {
-      "id": 163,
-      "name": "Brain Before Sleep",
-      "url": "http://images.restapi.co.za/memes/34vt4i.jpg",
-      "width": 318,
-      "height": 320
-    },
-    {
-      "id": 149,
-      "name": "A train hitting a school bus",
-      "url": "http://images.restapi.co.za/memes/434i5j.png",
-      "width": 920,
-      "height": 1086
-    },
-    {
-      "id": 196,
-      "name": "the office congratulations",
-      "url": "http://images.restapi.co.za/memes/2ji8hx.jpg",
-      "width": 521,
-      "height": 496
-    },
-    {
-      "id": 194,
-      "name": "is this butterfly",
-      "url": "http://images.restapi.co.za/memes/2cjr7j.jpg",
-      "width": 1587,
-      "height": 1425
-    },
-    {
-      "id": 201,
-      "name": "say the line bart! simpsons",
-      "url": "http://images.restapi.co.za/memes/176h0h.jpg",
-      "width": 395,
-      "height": 650
-    },
-    {
-      "id": 169,
-      "name": "Evil Kermit",
-      "url": "http://images.restapi.co.za/memes/1e7ql7.jpg",
-      "width": 700,
-      "height": 325
-    },
-    {
-      "id": 188,
-      "name": "Spongebob Burning Paper",
-      "url": "http://images.restapi.co.za/memes/2bc2vf.jpg",
-      "width": 560,
-      "height": 678
-    },
-    {
-      "id": 117,
-      "name": "Trade Offer",
-      "url": "http://images.restapi.co.za/memes/54hjww.jpg",
-      "width": 607,
-      "height": 794
+      "id": 114,
+      "name": "One Does Not Simply",
+      "url": "http://images.restapi.co.za/memes/1bij.jpg",
+      "width": 568,
+      "height": 335
     },
     {
       "id": 150,
@@ -85,32 +15,123 @@
       "height": 734
     },
     {
-      "id": 133,
-      "name": "Who Killed Hannibal",
-      "url": "http://images.restapi.co.za/memes/28s2gu.jpg",
-      "width": 1280,
-      "height": 1440
+      "id": 124,
+      "name": "Woman Yelling At Cat",
+      "url": "http://images.restapi.co.za/memes/345v97.jpg",
+      "width": 680,
+      "height": 438
     },
     {
-      "id": 112,
-      "name": "Distracted Boyfriend",
-      "url": "http://images.restapi.co.za/memes/1ur9b0.jpg",
-      "width": 1200,
-      "height": 800
+      "id": 200,
+      "name": "Friendship ended",
+      "url": "http://images.restapi.co.za/memes/29v4rt.jpg",
+      "width": 800,
+      "height": 600
     },
     {
-      "id": 116,
-      "name": "Anakin Padme 4 Panel",
-      "url": "http://images.restapi.co.za/memes/5c7lwq.png",
-      "width": 768,
-      "height": 768
+      "id": 105,
+      "name": "Bernie I Am Once Again Asking For Your Support",
+      "url": "http://images.restapi.co.za/memes/3oevdk.jpg",
+      "width": 750,
+      "height": 750
     },
     {
-      "id": 202,
-      "name": "Average Fan vs Average Enjoyer",
-      "url": "http://images.restapi.co.za/memes/58q6lo.png",
-      "width": 708,
+      "id": 146,
+      "name": "Inhaling Seagull",
+      "url": "http://images.restapi.co.za/memes/1w7ygt.jpg",
+      "width": 1269,
+      "height": 2825
+    },
+    {
+      "id": 125,
+      "name": "Blank Nut Button",
+      "url": "http://images.restapi.co.za/memes/1yxkcp.jpg",
+      "width": 600,
+      "height": 446
+    },
+    {
+      "id": 183,
+      "name": "Success Kid",
+      "url": "http://images.restapi.co.za/memes/1bhk.jpg",
+      "width": 500,
+      "height": 500
+    },
+    {
+      "id": 168,
+      "name": "Unsettled Tom",
+      "url": "http://images.restapi.co.za/memes/2wifvo.jpg",
+      "width": 680,
+      "height": 550
+    },
+    {
+      "id": 167,
+      "name": "Gus Fring we are not the same",
+      "url": "http://images.restapi.co.za/memes/5o32tt.png",
+      "width": 700,
+      "height": 1000
+    },
+    {
+      "id": 178,
+      "name": "Three-headed Dragon",
+      "url": "http://images.restapi.co.za/memes/33e92f.jpg",
+      "width": 680,
+      "height": 544
+    },
+    {
+      "id": 126,
+      "name": "This Is Fine",
+      "url": "http://images.restapi.co.za/memes/wxica.jpg",
+      "width": 580,
+      "height": 282
+    },
+    {
+      "id": 138,
+      "name": "Futurama Fry",
+      "url": "http://images.restapi.co.za/memes/1bgw.jpg",
+      "width": 552,
+      "height": 414
+    },
+    {
+      "id": 164,
+      "name": "Roll Safe Think About It",
+      "url": "http://images.restapi.co.za/memes/1h7in3.jpg",
+      "width": 702,
+      "height": 395
+    },
+    {
+      "id": 169,
+      "name": "Evil Kermit",
+      "url": "http://images.restapi.co.za/memes/1e7ql7.jpg",
+      "width": 700,
+      "height": 325
+    },
+    {
+      "id": 119,
+      "name": "Always Has Been",
+      "url": "http://images.restapi.co.za/memes/46e43q.png",
+      "width": 960,
+      "height": 540
+    },
+    {
+      "id": 120,
+      "name": "Batman Slapping Robin",
+      "url": "http://images.restapi.co.za/memes/9ehk.jpg",
+      "width": 400,
+      "height": 387
+    },
+    {
+      "id": 110,
+      "name": "Buff Doge vs. Cheems",
+      "url": "http://images.restapi.co.za/memes/43a45p.png",
+      "width": 937,
       "height": 720
+    },
+    {
+      "id": 197,
+      "name": "Gentlemen, it is with great pleasure to inform you that",
+      "url": "http://images.restapi.co.za/memes/56p56k.jpg",
+      "width": 1400,
+      "height": 1400
     },
     {
       "id": 190,
@@ -118,31 +139,12 @@
       "url": "http://images.restapi.co.za/memes/44eggm.png",
       "width": 460,
       "height": 284
-    },
-    {
-      "id": 179,
-      "name": "spiderman pointing at spiderman",
-      "url": "http://images.restapi.co.za/memes/1tkjq9.jpg",
-      "width": 800,
-      "height": 450
-    },
-    {
-      "id": 170,
-      "name": "Third World Skeptical Kid",
-      "url": "http://images.restapi.co.za/memes/265k.jpg",
-      "width": 426,
-      "height": 426
-    },
-    {
-      "id": 118,
-      "name": "Mocking Spongebob",
-      "url": "http://images.restapi.co.za/memes/1otk96.jpg",
-      "width": 502,
-      "height": 353
     }
   ],
   "viewedMemes": [
-    126,
-    149
+    114,
+    150,
+    190,
+    110
   ]
 }

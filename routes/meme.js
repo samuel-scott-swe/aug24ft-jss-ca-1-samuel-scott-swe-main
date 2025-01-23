@@ -8,8 +8,16 @@ const path = require('path');
 
 const pathToDataFile = path.join(__dirname, '../data/memes.json');
 
-// GET
-router.get('/:id', (req, res) => {
+// Authentication middleware
+const ensureAuthenticated = (req, res, next) => {
+  if (req.isAuthenticated()) {
+    return next();
+  }
+  res.redirect('/login');
+};
+
+// GET - Protected by authentication
+router.get('/:id', ensureAuthenticated, (req, res) => {
   try {
     const data = JSON.parse(fs.readFileSync(pathToDataFile, 'utf-8'));
     const memeCache = data.memes;

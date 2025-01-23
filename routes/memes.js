@@ -23,6 +23,7 @@ router.get('/', (req, res) => {
       viewedMemes,
       noResults: false, // Default noResults to false for initial load
       memeImagePath: '', // No image path needed for initial load
+      user: req.user // Pass the user object to the view
     });
   } catch (error) {
     console.error('Error reading or parsing memes.json:', error);
@@ -50,7 +51,8 @@ router.post('/search', (req, res) => {
       memes: filteredMemes,
       viewedMemes: data.viewedMemes,
       noResults, // Pass the noResults flag
-      memeImagePath: '/images/404.png', // Pass the path to the meme image
+      memeImagePath: noResults ? '/images/no-results-meme.jpg' : '',
+      user: req.user // Pass the user object to the view
     });
   } catch (error) {
     console.error('Error handling /search route:', error);
