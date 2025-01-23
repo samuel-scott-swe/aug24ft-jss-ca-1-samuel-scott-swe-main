@@ -1,130 +1,11 @@
 {
   "memes": [
     {
-      "id": 110,
-      "name": "Buff Doge vs. Cheems",
-      "url": "http://images.restapi.co.za/memes/43a45p.png",
-      "width": 937,
-      "height": 720
-    },
-    {
-      "id": 165,
-      "name": "Pawn Stars Best I Can Do",
-      "url": "http://images.restapi.co.za/memes/19vcz0.jpg",
-      "width": 624,
-      "height": 352
-    },
-    {
-      "id": 134,
-      "name": "Surprised Pikachu",
-      "url": "http://images.restapi.co.za/memes/2kbn1e.jpg",
-      "width": 1893,
-      "height": 1893
-    },
-    {
-      "id": 194,
-      "name": "is this butterfly",
-      "url": "http://images.restapi.co.za/memes/2cjr7j.jpg",
-      "width": 1587,
-      "height": 1425
-    },
-    {
-      "id": 123,
-      "name": "Sad Pablo Escobar",
-      "url": "http://images.restapi.co.za/memes/1c1uej.jpg",
-      "width": 720,
-      "height": 709
-    },
-    {
-      "id": 169,
-      "name": "Evil Kermit",
-      "url": "http://images.restapi.co.za/memes/1e7ql7.jpg",
-      "width": 700,
-      "height": 325
-    },
-    {
-      "id": 148,
-      "name": "All My Homies Hate",
-      "url": "http://images.restapi.co.za/memes/3kwur5.jpg",
-      "width": 680,
-      "height": 615
-    },
-    {
-      "id": 155,
-      "name": "Is This A Pigeon",
-      "url": "http://images.restapi.co.za/memes/1o00in.jpg",
-      "width": 1587,
-      "height": 1425
-    },
-    {
-      "id": 145,
-      "name": "They're The Same Picture",
-      "url": "http://images.restapi.co.za/memes/2za3u1.jpg",
-      "width": 1363,
-      "height": 1524
-    },
-    {
-      "id": 144,
-      "name": "Megamind peeking",
-      "url": "http://images.restapi.co.za/memes/64sz4u.png",
-      "width": 540,
-      "height": 540
-    },
-    {
-      "id": 181,
-      "name": "Squidward window",
-      "url": "http://images.restapi.co.za/memes/145qvv.jpg",
-      "width": 598,
-      "height": 420
-    },
-    {
-      "id": 192,
-      "name": "Dad Joke Meme",
-      "url": "http://images.restapi.co.za/memes/yk3wp.jpg",
-      "width": 960,
-      "height": 720
-    },
-    {
-      "id": 176,
-      "name": "Finding Neverland",
-      "url": "http://images.restapi.co.za/memes/3pnmg.jpg",
-      "width": 423,
-      "height": 600
-    },
-    {
-      "id": 178,
-      "name": "Three-headed Dragon",
-      "url": "http://images.restapi.co.za/memes/33e92f.jpg",
-      "width": 680,
-      "height": 544
-    },
-    {
-      "id": 179,
-      "name": "spiderman pointing at spiderman",
-      "url": "http://images.restapi.co.za/memes/1tkjq9.jpg",
-      "width": 800,
-      "height": 450
-    },
-    {
-      "id": 104,
-      "name": "Left Exit 12 Off Ramp",
-      "url": "http://images.restapi.co.za/memes/22bdq6.jpg",
-      "width": 804,
-      "height": 767
-    },
-    {
-      "id": 108,
-      "name": "Two Buttons",
-      "url": "http://images.restapi.co.za/memes/1g8my4.jpg",
-      "width": 600,
-      "height": 908
-    },
-    {
-      "id": 199,
-      "name": "Valentine's Day Card Meme",
-      "url": "http://images.restapi.co.za/memes/24h8wm.jpg",
-      "width": 640,
-      "height": 351
+      "id": 118,
+      "name": "Mocking Spongebob",
+      "url": "http://images.restapi.co.za/memes/1otk96.jpg",
+      "width": 502,
+      "height": 353
     },
     {
       "id": 115,
@@ -134,14 +15,134 @@
       "height": 649
     },
     {
-      "id": 151,
-      "name": "Ancient Aliens",
-      "url": "http://images.restapi.co.za/memes/26am.jpg",
+      "id": 124,
+      "name": "Woman Yelling At Cat",
+      "url": "http://images.restapi.co.za/memes/345v97.jpg",
+      "width": 680,
+      "height": 438
+    },
+    {
+      "id": 196,
+      "name": "the office congratulations",
+      "url": "http://images.restapi.co.za/memes/2ji8hx.jpg",
+      "width": 521,
+      "height": 496
+    },
+    {
+      "id": 163,
+      "name": "Brain Before Sleep",
+      "url": "http://images.restapi.co.za/memes/34vt4i.jpg",
+      "width": 318,
+      "height": 320
+    },
+    {
+      "id": 121,
+      "name": "Disaster Girl",
+      "url": "http://images.restapi.co.za/memes/23ls.jpg",
       "width": 500,
-      "height": 437
+      "height": 375
+    },
+    {
+      "id": 178,
+      "name": "Three-headed Dragon",
+      "url": "http://images.restapi.co.za/memes/33e92f.jpg",
+      "width": 680,
+      "height": 544
+    },
+    {
+      "id": 180,
+      "name": "Hard To Swallow Pills",
+      "url": "http://images.restapi.co.za/memes/271ps6.jpg",
+      "width": 680,
+      "height": 979
+    },
+    {
+      "id": 138,
+      "name": "Futurama Fry",
+      "url": "http://images.restapi.co.za/memes/1bgw.jpg",
+      "width": 552,
+      "height": 414
+    },
+    {
+      "id": 192,
+      "name": "Dad Joke Meme",
+      "url": "http://images.restapi.co.za/memes/yk3wp.jpg",
+      "width": 960,
+      "height": 720
+    },
+    {
+      "id": 129,
+      "name": "Epic Handshake",
+      "url": "http://images.restapi.co.za/memes/28j0te.jpg",
+      "width": 900,
+      "height": 645
+    },
+    {
+      "id": 137,
+      "name": "Sleeping Shaq",
+      "url": "http://images.restapi.co.za/memes/1nck6k.jpg",
+      "width": 640,
+      "height": 631
+    },
+    {
+      "id": 147,
+      "name": "Drake Blank",
+      "url": "http://images.restapi.co.za/memes/1iruch.jpg",
+      "width": 717,
+      "height": 717
+    },
+    {
+      "id": 144,
+      "name": "Megamind peeking",
+      "url": "http://images.restapi.co.za/memes/64sz4u.png",
+      "width": 540,
+      "height": 540
+    },
+    {
+      "id": 136,
+      "name": "Laughing Leo",
+      "url": "http://images.restapi.co.za/memes/4acd7j.png",
+      "width": 470,
+      "height": 470
+    },
+    {
+      "id": 131,
+      "name": "American Chopper Argument",
+      "url": "http://images.restapi.co.za/memes/2896ro.jpg",
+      "width": 640,
+      "height": 1800
+    },
+    {
+      "id": 113,
+      "name": "Running Away Balloon",
+      "url": "http://images.restapi.co.za/memes/261o3j.jpg",
+      "width": 761,
+      "height": 1024
+    },
+    {
+      "id": 194,
+      "name": "is this butterfly",
+      "url": "http://images.restapi.co.za/memes/2cjr7j.jpg",
+      "width": 1587,
+      "height": 1425
+    },
+    {
+      "id": 135,
+      "name": "Flex Tape",
+      "url": "http://images.restapi.co.za/memes/2reqtg.png",
+      "width": 510,
+      "height": 572
+    },
+    {
+      "id": 123,
+      "name": "Sad Pablo Escobar",
+      "url": "http://images.restapi.co.za/memes/1c1uej.jpg",
+      "width": 720,
+      "height": 709
     }
   ],
   "viewedMemes": [
-    165
+    124,
+    118
   ]
 }
