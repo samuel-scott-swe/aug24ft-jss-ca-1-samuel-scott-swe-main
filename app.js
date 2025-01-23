@@ -11,6 +11,7 @@ const memeRouter = require('./routes/meme'); // For Meme Details
 // --------------------------------------------------------------
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
+const session = require('express-session');
 console.log('All packages loaded successfully');
 // ---------------------------------------------------------------
 
@@ -20,6 +21,61 @@ const pathToDataFile = path.join(__dirname, 'data', 'memes.json');
 const apiConfiguration = JSON.parse(fs.readFileSync('./api.json', 'utf-8')); // Load API URL from config
 const apiUrl = apiConfiguration.apiUrl;
 console.log('API URL loaded:', apiUrl);
+
+// Configure express-session
+app.use(
+  session({
+    secret: 'supersecretkey', // Replace with a more secure secret in production
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+
+// Initialize PassportJS
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Path to users.json file
+const pathToUsersFile = path.join(__dirname, 'data', 'users.json');
+
+// Load users from users.json
+const users = JSON.parse(fs.readFileSync(pathToUsersFile, 'utf-8'));
+
+// Configure PassportJS LocalStrategy
+passport.use(
+  new LocalStrategy((username, password, done) => {
+    const user = users.find((u) => u.username === username);
+    if (!user) {
+      return done(null, false, { message: 'Incorrect username.' });
+    }
+    if (user.password !== password) {
+      return done(null, false, { message: 'Incorrect password.' });
+    }
+    return done(null, user);
+  })
+);
+
+// Serialize user to session
+passport.serializeUser((user, done) => {
+  done(null, user.username);
+});
+
+// Deserialize user from session
+passport.deserializeUser((username, done) => {
+  const user = users.find((u) => u.username === username);
+  if (!user) {
+    return done(new Error('User not found'));
+  }
+  done(null, user);
+});
+
+// Authentication middleware
+function ensureAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) {
+    return next();
+  }
+  res.redirect('/login');
+}
 
 // Fetch memes from the API and cache them in the data file
 async function fetchAndCacheMemes(apiUrl) {
@@ -88,7 +144,7 @@ app.use(function (req, res, next) {
 });
 
 // error handler
-app.use(function (err, req, res, next) {
+app.use(function (err, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
