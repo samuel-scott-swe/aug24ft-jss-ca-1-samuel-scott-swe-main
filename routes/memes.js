@@ -51,7 +51,7 @@ router.post('/search', (req, res) => {
       memes: filteredMemes,
       viewedMemes: data.viewedMemes,
       noResults, // Pass the noResults flag
-      memeImagePath: noResults ? '/images/no-results-meme.jpg' : '',
+      memeImagePath: noResults ? '/images/404.png' : undefined,
       user: req.user // Pass the user object to the view
     });
   } catch (error) {
