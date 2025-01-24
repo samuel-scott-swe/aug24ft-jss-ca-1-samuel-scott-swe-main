@@ -52,6 +52,8 @@ Users are shown the Login page when clicking the "Login" button in the Navbar, i
 Guest users  - should not see the 'Details' buttons to view more information about the memes, but should be able to see the list of memes in the table. 
 For logged in users - once a user has successfully logged in, they should be redirected back to the Memes Overview page, and only then should the 'Details' buttons be visible. Clicking these buttons will open the Meme Details page, where users can see more information about the chosen meme.
 If a Guest user enters the URL of a meme to access the details for that meme, they would need to be redirected to the login page. (Guest users are not allowed to see the details even if they enter the URL)
+
+
 There needs to be a Navbar:
 This navbar must include the Central logo, the "Login" or "Logout" buttons (Show the relevant button depending on if the user is currently logged in), and the relevant user name ("Guest" if user is not logged in, their Username if the user is logged in) 
 This Navbar must appear on both the Meme Overview and Meme Details page (i.e. reuse the same view to not repeat code)
