@@ -34,24 +34,20 @@ router.get('/', (req, res) => {
 router.post('/search', (req, res) => {
   try {
     const searchTerm = req.body.searchTerm?.toLowerCase() || '';
-    console.log('Search Term:', searchTerm); // Debugging
 
     const data = JSON.parse(fs.readFileSync(pathToDataFile, 'utf-8'));
-    console.log('Memes Data:', data.memes); // Debugging
 
     const filteredMemes = data.memes.filter(meme =>
       meme.name.toLowerCase().includes(searchTerm)
     );
-    console.log('Filtered Memes:', filteredMemes); // Debugging
 
     const noResults = filteredMemes.length === 0; // Determine if there are no results
-    console.log('No Results:', noResults); // Debugging
 
     res.render('memes', {
       memes: filteredMemes,
       viewedMemes: data.viewedMemes,
       noResults, // Pass the noResults flag
-      memeImagePath: noResults ? '/images/404.png' : '',
+      memeImagePath: noResults ? '/images/404.png' : undefined,
       user: req.user // Pass the user object to the view
     });
   } catch (error) {
@@ -59,6 +55,5 @@ router.post('/search', (req, res) => {
     res.status(500).send('Internal Server Error');
   }
 });
-
 
 module.exports = router;
