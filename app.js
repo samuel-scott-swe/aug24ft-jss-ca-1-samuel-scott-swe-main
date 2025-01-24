@@ -1,28 +1,24 @@
-var createError = require('http-errors');
 var express = require('express');
+var createError = require('http-errors');
 var path = require('path');
 var logger = require('morgan');
-var indexRouter = require('./routes/index');
-var app = express();
-const authRouter = require('./routes/authentication'); // For Login/Logout
-const memesRouter = require('./routes/memes'); // For Meme Overview
-const memeRouter = require('./routes/meme'); // For Meme Details
-const flash = require('connect-flash'); // connect flash
-
-// Dependencies and libraries.
-// --------------------------------------------------------------
+const fs = require('fs');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const session = require('express-session');
-console.log('All packages loaded successfully');
-// ---------------------------------------------------------------
+const flash = require('connect-flash');
+
+const indexRouter = require('./routes/index');
+const authRouter = require('./routes/authentication'); // For Login/Logout
+const memesRouter = require('./routes/memes'); // For Meme Overview
+const memeRouter = require('./routes/meme'); // For Meme Details
+
+var app = express();
 
 // Load API configuration
-const fs = require('fs');
 const pathToDataFile = path.join(__dirname, 'data', 'memes.json');
 const apiConfiguration = JSON.parse(fs.readFileSync('./api.json', 'utf-8')); // Load API URL from config
 const apiUrl = apiConfiguration.apiUrl;
-console.log('API URL loaded:', apiUrl);
 
 // Configure express-session
 app.use(
@@ -113,10 +109,8 @@ async function fetchAndCacheMemes(apiUrl) {
     const cacheData = { memes, viewedMemes: [] };
     fs.writeFileSync(pathToDataFile, JSON.stringify(cacheData, null, 2), 'utf-8');
 
-    console.log('Memes fetched and cached in data/memes.json.');
     return memes;
   } catch (error) {
-    console.error('Error fetching or caching memes:', error.message);
     throw error;
   }
 }
@@ -130,7 +124,7 @@ async function fetchAndCacheMemes(apiUrl) {
     const memes = await fetchAndCacheMemes(apiUrl);
     app.set('memeCache', memes); // Store in app-level cache
   } catch (error) {
-    console.error('Failed to initialize meme cache:', error);
+    throw error;
   }
 })();
 
