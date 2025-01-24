@@ -4,7 +4,7 @@ function open_new_window(location) {
 
 // Add event listener for details button using jQuery
 $(document).ready(function() {
-  $('.view-detail').on('click', async function(e) {
+  $(document).on('click', '.view-detail', async function(e) {
     e.preventDefault();
     const memeId = $(this).data('id');
 
@@ -13,10 +13,11 @@ $(document).ready(function() {
         url: '/memes/meme',
         method: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify({ id: memeId })
+        data: JSON.stringify({ id: memeId }),
       });
 
-      if (response.status === 200) {
+      // Redirect only if response is successful
+      if (response) {
         window.location.href = `/memes/meme/${memeId}`;
       } else {
         console.error('Failed to fetch meme details');
@@ -26,4 +27,3 @@ $(document).ready(function() {
     }
   });
 });
- 
