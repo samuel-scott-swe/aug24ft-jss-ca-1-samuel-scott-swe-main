@@ -30,8 +30,6 @@
                 </div>
                 <div class="col-12">
                   <div class="card-body text-center">
-                    <h5 class="card-title">Meme #<%= meme.id %></h5>
-                    <p class="card-text">Size: <%= meme.width %>x<%= meme.height %></p>
                     <% if (user) { %>
                       <a href="/memes/meme/<%= meme.id %>" class="btn btn-primary">Details</a>
                     <% } %>
